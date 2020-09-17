@@ -12,7 +12,6 @@ import {
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { navigate } from "@reach/router";
 
-
 const useStyles = makeStyles((theme) => ({
   margintop: {
     padding: theme.spacing(5),
@@ -51,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-
 
 function EmailPage(props) {
   const classes = useStyles();
@@ -105,11 +103,14 @@ function EmailPage(props) {
             fullWidth
             required
           />
-          <Link href="#" onClick={preventDefault}>
-            <Typography variant="body2" className={classes.boldtext}>
-              Forgot email?
-            </Typography>
-          </Link>
+          <Box display="flex" justifyContent="flex-start">
+            <Link href="#" onClick={preventDefault}>
+              <Typography variant="body2" className={classes.boldtext}>
+                Forgot email?
+              </Typography>
+            </Link>
+          </Box>
+
           <div className={classes.mt}>
             <Typography variant="body2" align="left">
               Not your computer? Use Guest mode to sign in privately.{" "}
