@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from "react";
+import { Router } from "@reach/router";
+import Homepage from "./pages";
+import EmailPage from "./pages/emailinput";
+import PasswordPage from "./pages/passwordinput";
+import logo from "./logo.svg";
+import "./App.css";
+
+export const AppContext = createContext();
 
 function App() {
+  const [loading, setLoading] = useState({
+    loading: false,
+  });
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ loading, data, setData, setLoading }}>
+      <div className="App">
+        <Router>
+          <Homepage path="/">
+            <EmailPage path="/" />
+            <PasswordPage path="password" />
+          </Homepage>
+        </Router>
+      </div>
+    </AppContext.Provider>
   );
 }
 
