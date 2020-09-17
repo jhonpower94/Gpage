@@ -51,10 +51,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function EmailPage() {
+function EmailPage(props) {
   const classes = useStyles();
   const { loading, data, setData, setLoading } = useContext(AppContext);
-  const [email, setEmail] = useState("jhonsnow@gmail.com");
+  const [email, setEmail] = useState(props.email);
 
   const submit = (e) => {
     e.preventDefault();

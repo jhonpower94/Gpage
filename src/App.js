@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <Router>
           <Homepage path="/">
-            <EmailPage path="/" />
+            <EmailPage path="/:email" />
             <PasswordPage path="password" />
           </Homepage>
         </Router>
