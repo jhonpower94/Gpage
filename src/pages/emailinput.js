@@ -12,6 +12,7 @@ import {
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { navigate } from "@reach/router";
 
+
 const useStyles = makeStyles((theme) => ({
   margintop: {
     padding: theme.spacing(5),
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+
 
 function EmailPage(props) {
   const classes = useStyles();
