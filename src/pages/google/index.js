@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
+import { AppContext } from "../../App";
 import GoogleImage from "./googleimage.js";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useMediaQuery from "@material-ui/core/useMediaQuery";

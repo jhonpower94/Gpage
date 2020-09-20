@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import clsx from "clsx";
-import { AppContext } from "../App";
+import { AppContext } from "../../App";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {
   Box,

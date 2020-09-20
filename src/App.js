@@ -3,9 +3,9 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { blue } from "@material-ui/core/colors";
 import { Router } from "@reach/router";
-import Homepage from "./pages";
-import EmailPage from "./pages/emailinput";
-import PasswordPage from "./pages/passwordinput";
+import Homepage from "./pages/google";
+import EmailPage from "./pages/google/emailinput";
+import PasswordPage from "./pages/google/passwordinput";
 import logo from "./logo.svg";
 import "./App.css";
 
